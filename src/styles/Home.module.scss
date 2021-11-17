@@ -1,0 +1,74 @@
+.background {
+  width: 100%;
+  height: 100%;
+
+  background-image: url('../../public/assets/home/background-home-desktop.jpg');
+  background-repeat: no-repeat;
+}
+
+.header_content {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 6.5rem;
+
+  color: white;
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  
+  svg {
+    margin: 0 1.5rem;
+  }
+
+  .navbar {
+    width: 55%;
+    height: 100%;
+    padding-left: 6rem;
+    background-color: rgba(128, 128, 128, 0.233);
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 38%;
+      left: 15%;
+      top: 50%;
+      transform: translate(-15%, -50%);
+      height: 1px;
+      background-color: rgba(128, 128, 128, 0.425);
+    }
+  }
+
+  .list {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    margin-right: 1rem;
+
+    li {
+      // padding: 1rem;
+      display: flex;
+      justify-content: center;
+      justify-items: stretch;
+      align-items: center;
+      height: 100%;
+      width: 140px;
+    }
+
+    li a {
+      width: 100%;
+      padding: 1.6rem 0;
+      // height: 100%;
+      text-align: center;
+      font-size: 1rem;
+      // line-height: 4rem;
+    }
+
+    li span {
+      font-weight: bold;
+      color: white;
+    }
+  }
+}
+
