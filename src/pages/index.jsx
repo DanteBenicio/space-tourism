@@ -3,6 +3,51 @@ import styles from '../styles/Home.module.scss'
 import Logo from '../../public/assets/shared/logo.jsx'
 
 export default function Home() {
+  const [menuList, setMenuList] = useState([
+    {
+      id: 0,
+      content: 'Home',
+      active: true,
+    },
+    {
+      id: 1,
+      content: 'Destination',
+      active: false
+    },
+    {
+      id: 2,
+      content: 'Crew',
+      active: false
+    },
+    {
+      id: 3,
+      content: 'Technology',
+      active: false,
+    }
+  ])
+
+  function addClassActive(id) {
+    const attPropertyActive = menuList.map(li => {
+      if (li.active) {
+        return {
+          ...li,
+          active: false
+        }
+      }
+
+      if (li.id === id) {
+        return {
+          ...li,
+          active: true
+        }
+      }
+
+      return li
+    })
+
+    setMenuList(attPropertyActive)
+  }
+
   return (
     <>
       <Head>
