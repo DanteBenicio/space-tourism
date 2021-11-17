@@ -54,7 +54,28 @@
       align-items: center;
       height: 100%;
       width: 140px;
+      border-bottom: 3px solid transparent;
+      // transition: border-bottom 0.2s ease-in-out;
+
+      @keyframes borderAnimation {
+        from {
+          border-bottom: 3px solid rgba(255, 255, 255, 0);
+        }
+        
+        to {
+          border-bottom: 3px solid white;
+        }
+      }
+
+      &.active {
+        animation-name: borderAnimation;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+      }
     }
+
+
 
     li a {
       width: 100%;
