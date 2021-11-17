@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import Logo from '../../public/assets/shared/logo.jsx'
+import { useState } from 'react'
 
 export default function Home() {
   const [menuList, setMenuList] = useState([
