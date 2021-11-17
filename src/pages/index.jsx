@@ -61,14 +61,11 @@ export default function Home() {
           <Logo />
           <nav className={styles.navbar}>
             <ul className={styles.list}>
-              <li>
-                <a href="#"><span>00</span> Home</a></li>
-              <li>
-                <a href="#"><span>01</span> Destination</a></li>
-              <li>
-                <a href="#"><span>02</span> Crew</a></li>
-              <li>
-                <a href="#"><span>03</span> Technology</a></li>
+             {menuList.map(li => (
+               <li key={li.id} onClick={() => addClassActive(li.id)} className={li.active ? styles.active : ''} >
+                 <a href="#"><span>0{li.id}</span> {li.content}</a>
+               </li>
+             ))}
             </ul>
           </nav>
         </header>
