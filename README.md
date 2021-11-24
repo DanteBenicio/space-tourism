@@ -1,6 +1,10 @@
 <div align="center">
   <img src="https://user-images.githubusercontent.com/72478098/143322198-bd750c33-c0a2-4f12-8364-76ce293fddb7.png" />
 </div>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/72478098/143322598-148d786a-1c70-4269-aed9-f1e98bc1df39.png" />
+</div>
+
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
