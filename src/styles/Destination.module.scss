@@ -1,0 +1,126 @@
+$dark-color: #0B0D17;
+$white-primary: #fff;
+$white-secondary: #D0D6F9;
+
+@import './Header.module.scss';
+
+.main_container {
+  .main_content {
+    // width: 70vw;
+    margin-top: 1.5rem;
+    color: $white-primary;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .section_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 445px;
+      height: 472px;
+
+      .list {
+        color: $white-secondary;
+        list-style: none;
+        display: flex;
+        margin-bottom: 37px;
+        gap: 36px;
+
+        .selected {
+          color: $white-primary;
+          border-bottom: 3px solid $white-primary;
+        }
+
+        li {
+          cursor: pointer;
+          height: 34px;
+          border-bottom: 3px solid transparent;
+
+          &:hover {
+            border-bottom: 3px solid $white-secondary;
+          }
+        }
+
+      }
+
+      .planetTextContent {
+        color: $white-secondary;
+        font-family: Barlow;
+        font-weight: 400;
+        font-size: 18px;
+        height: 5.2rem;
+        margin-bottom: 54px;
+      }
+
+      .planetInfo {
+        border-top: 1px solid #383B4B;
+        display: flex;
+        // justify-content: space-between;
+        gap: 79px;
+        align-items: flex-end;
+
+        div {
+          margin-top: 28px;
+        }
+
+        p {
+          font-size: 14px;
+          letter-spacing: 2.36px;
+          font-family: 'Barlow Condensed';
+          align-self: flex-end;
+          margin-bottom: 0.8rem;
+        }
+
+        span {
+          font-family: Bellefair;
+          font-size: 28px;
+        }
+      }
+  
+    }
+
+    @media screen and (max-width: 910px) {
+      margin-top: 3rem;
+      flex-direction: column;
+      gap: 3rem;
+
+      .section_image {
+        margin: 0 3.5rem;
+      }
+
+      .section_content {
+        width: 60%;
+
+        .planetTextContent {
+          text-align: normal;
+        }
+
+        h1 {
+          align-self: center;
+        }
+        .list{
+          align-self: center;
+        }
+
+        .planetInfo {
+          // flex-wrap: wrap;
+          justify-content: center;
+
+          @media screen and (max-width: 480px) {
+            align-items: center;
+            gap: 1rem;
+            flex-direction: column;
+
+            div {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+ 
+

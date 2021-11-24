@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const BackgroundImage = styled.div`
   width: 100vw;
   height: 100vh;
-  overflow: auto;
+  overflow-x: hidden;
   padding-bottom: 2rem;
   
   background-image: url('/assets/${({ page }) => page}/background-${({ page }) => page}-desktop.jpg');
