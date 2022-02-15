@@ -98,9 +98,7 @@ const Crew = () => {
           </ul>
         </main>
         <section>
-          
-        <Image className={styles.container_image} src={personSelected.imageURL} alt="Person" width="518.07px" height="612px"/>
-
+          <Image src={personSelected.imageURL} alt="Person" width="100%" height="100%" layout="responsive"/>
         </section>
       </>
     )
@@ -117,7 +115,7 @@ const Crew = () => {
         addClassActive={addClassActive}
       />
 
-      <DescriptionTitle number="02" title="Meet Your Crew"/>
+        <DescriptionTitle number="02" title="Meet Your Crew"/>
       <main className={styles.main_container}>
         <RenderContent />
       </main>

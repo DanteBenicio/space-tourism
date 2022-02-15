@@ -59,7 +59,7 @@ const Technology = () => {
             <p>{technologySelected.textContent}</p>
           </section>
         </main>
-        <Image src={technologySelected.imageURL} alt="Foguete" width="515px" height="527px"/>
+        <Image src={technologySelected.imageURL} className={styles.rocket_image} alt="Foguete" width="515px" height="527px"/>
       </main>
     )
   }
