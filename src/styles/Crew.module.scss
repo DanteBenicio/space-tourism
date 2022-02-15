@@ -4,20 +4,18 @@ $white-secondary: #D0D6F9;
 
 .main_container {
   display: flex;
+  height: 100%;
   gap: 91px;
   justify-content: center;
   align-items: center;
   color: $white-primary;
-  padding: 0 108px;
+  padding: 0 4rem;
 
   .main_content {
     position: relative;
-    display: flex;
-    // gap: 1rem;
+    display: inline-block;
     height: 100%;
-    width: 488px;
-    flex-direction: column;
-    justify-content: space-between;
+    max-width: 488px;
 
     .office {
       font-family: Bellefair;
@@ -25,30 +23,22 @@ $white-secondary: #D0D6F9;
       font-size: 2rem;
       mix-blend-mode: normal;
       opacity: 0.25;
+      margin-bottom: 0.5rem;
     }
-
-    // h1 {
-    //   // margin-bottom: 27px;
-    //   // height: 130px;
-    //   font-size: 56px;
-    //   font-family: 'Bellefair';
-    //   font-weight: 400;
-    // }
 
     p {
       font-family: 'Barlow';
       font-size: 18px;
-      height: 84px;
+      font-weight: 400;
       width: auto;
       color: $white-secondary;
+      margin-top: 0.5rem;
     }
 
     .listPerson { 
       position: absolute;
       top: 120%;
       transform: translateY(-120%);
-      // margin-top: 2rem;
-      // justify-self: flex-end;
       display: flex;
       list-style: none;
       gap: 1rem;
@@ -82,22 +72,36 @@ $white-secondary: #D0D6F9;
 
   section {
     position: relative;
-    // padding-left: 20px;
-    top: -60px;
-    // height: auto;
-    width: 568.07px;
-    display: flex;
+    max-width: 500px;
+    width: 100%;
+    display: inline-block;
     align-self: center;
-    align-items: flex-start;
+  }
 
-    .container_image {
-      align-items: center;
-      position: absolute;
-      // transform: translateY(-222%);
-      // top: ;
-      width: 568.07px;
+}
+
+@media screen and (max-width: 950px) {
+  .main_container {
+    flex-direction: column;
+
+    .main_content {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      margin-top: 2rem;
+
+      .office {
+        font-size: 1.5rem;
+      }
+
+      .listPerson {
+        top: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
   }
+}
 
 @media screen and (max-width: 500px) {
   .main_container {
@@ -109,7 +113,6 @@ $white-secondary: #D0D6F9;
       margin-top: 3rem;
 
       .listPerson {
-        // justify-self: center;
         top: -25%;
       }
     }
