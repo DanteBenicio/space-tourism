@@ -3,13 +3,14 @@ $white-primary: #fff;
 $white-secondary: #D0D6F9;
 
 .main_container {
+  margin-top: 1.5rem;
   display: flex;
   color: #FFF;
 
   .main_content {
     display: flex;
-    // margin-top: ;
-    margin-left: 8rem;
+    margin-left: 10%;
+    margin-right: 5%;
     gap: 2rem;
     width: 65%;
 
@@ -58,8 +59,7 @@ $white-secondary: #D0D6F9;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      width: 470px;
-      // height: 303px;
+      max-width: 470px;
 
       h3 {
         font-size: 1rem;
@@ -71,7 +71,7 @@ $white-secondary: #D0D6F9;
 
       p {
         margin-top: 1rem;
-        width: 444px;
+        max-width: 444px;
         font-size: 1.2rem;
         font-family: 'Barlow';
         color: $white-secondary;
