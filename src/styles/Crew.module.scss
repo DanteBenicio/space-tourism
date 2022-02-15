@@ -99,4 +99,19 @@ $white-secondary: #D0D6F9;
     }
   }
 
+@media screen and (max-width: 500px) {
+  .main_container {
+    margin-top: 1.5rem;
+    flex-direction: column-reverse;
+    gap: 70px;
+
+    .main_content {
+      margin-top: 3rem;
+
+      .listPerson {
+        // justify-self: center;
+        top: -25%;
+      }
+    }
+  }
 }
