@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import colors from '../../colors'
 
 const Heading = styled.h2`
-  margin-left: 7rem;
+  margin-left: 5%;
   font-size: 28px;
   color: ${props => props.whitePrimary};
   font-family: 'Barlow Condensed';
