@@ -3,9 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   height: 6.5rem;
-
   color: white;
   padding: 1rem 0;
   margin-bottom: 2rem;
@@ -22,146 +20,7 @@
     }
   }
 
-  @media screen and (max-width: 690px) {
-    .burguer {
-      top: 0;
-      z-index: 3;
-      cursor: pointer;
-      position: relative;
-      display: flex;
-      margin-top: 0;
-      transform: translateY(0);
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 6px;
-      text-align: center;
-      margin-right: 2rem;
-      width: 40px;
-      height: 50px;
 
-      div {
-        opacity: 1;
-        width: 100%;
-        background-color: white;
-        height: 3px;
-      }
-
-      > div:nth-child(1) {
-        transition: all 0.2s linear;
-
-        transform: rotate(0deg);
-      }
-
-      > div:nth-child(2) {
-        transition: all 0.2s linear;
-
-        opacity: 1;
-      }
-
-      > div:nth-child(3) {
-        transition: all 0.2s linear;
-        // position: absolute;
-        transform: rotate(0deg);
-      }
-
-      &_active {
-        cursor: pointer;
-        z-index: 3;
-        position: fixed;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 6px;
-        text-align: center;
-        margin-right: 2rem;
-        width: 40px;
-        height: 50px;
-        top: 3.5%;
-        // transition: transform 1s linear;
-
-        
-        > div {
-          width: 100%;
-          background-color: white;
-          height: 3px;
-          transition: all 0.2s linear;
-          opacity: 1;
-        }
-
-        > div:nth-child(1) {
-          transition: all 0.2s linear;
-
-          position: absolute;
-          transform: rotate(45deg);
-        }
-
-        > div:nth-child(2) {
-          transition: all 0.2s linear;
-
-          opacity: 0;
-        }
-
-        > div:nth-child(3) {
-          position: absolute;
-          transform: rotate(-45deg);
-        }
-      }
-
-    }
-
-    .burguer_active + .navbar {
-      z-index: 2;
-      position: fixed;
-      width: 70%;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      height: 100vh;
-      top: 0;
-      right: 0;
-      padding: 0;
-      transform: translateX(0);
-      transition: transform 0.2s linear;
-
-      .navbarList {
-        padding-top: 6rem;
-        flex-direction: column;
-
-        li {
-          width: 100%;
-          height: 10rem;
-          // height: 100px;
-        }
-      }
-    }
-
-    .burguer + .navbar {
-      z-index: 2;
-      position: absolute;
-      width: 70%;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-      height: 140vh;
-      top: 0;
-      right: 0;
-      padding: 0;
-      // transition: transform 0.2s linear;
-      transform: translateX(100%);
-
-      .navbarList {
-        padding-top: 6rem;
-        flex-direction: column;
-
-        li {
-          width: 100%;
-          height: 10rem;
-          // height: 100px;
-        }
-      }
-    }
-  }
   
   svg {
     margin: 0 1.5rem;
@@ -187,67 +46,7 @@
       background-color: rgba(128, 128, 128, 0.425);
     }
   }
-
-  @media screen and (max-width: 1115px) {
-    .navbar {
-      &::before {
-        left: -55%;
-        width: 60%;
-      }
-    }
-    
-    @media screen and (max-width: 960px) {
-      .navbar {
-        width: 60%;
   
-        &::before {
-          left: -42%;
-          width: 45%;
-        }
-      }
-
-        @media screen and (max-width: 885px) {
-          .navbar {
-            width: 65%;
-
-            &::before {
-              left: -32%;
-              width: 32%;
-            }
-          }
-          
-          @media screen and (max-width: 815px) {
-            .navbar {
-              width: 70%;
-
-              &::before {
-                left: -22%;
-                width: 22%;
-              }
-            }
-    
-            @media screen and (max-width: 758px) {
-              .navbar {
-                width: 75%;
-
-                &::before {
-                  left: -14%;
-                  width: 12%;
-                }
-              }
-
-              @media screen and (max-width: 690px) {
-                .navbar::before {
-                    width: 0;
-                }
-              }
-            }
-          }
-        } 
-    }
-  }
-
-
   .navbarList {
     list-style: none;
     height: 100%;
@@ -288,10 +87,8 @@
     li a {
       width: 100%;
       padding: 1.6rem 0;
-      // height: 100%;
       text-align: center;
       font-size: 1rem;
-      // line-height: 4rem;
     }
 
     li span {
@@ -300,29 +97,222 @@
       font-weight: bold;
       color: white;
     }
+  }
+}
 
-    @media screen and (max-width: 690px) {
-      .navbarList li {
-        border-bottom: none;
-        border-left: 3px solid transparent;
-        transition: background-color 0.2s linear;
-  
-        @keyframes borderAnimation {
-          from {
-            border-left: 3px solid rgba(255, 255, 255, 0);
-          }
-          
-          to {
-            border-left: 3px solid white;
-          }
-        }
-  
-        &.active {
-          animation-name: borderAnimation;
-          animation-duration: 0.5s;
-          animation-timing-function: linear;
-          animation-fill-mode: forwards;
-        }
+@media screen and (max-width: 1115px) {
+  .navbar {
+    &::before {
+      left: -55%;
+      width: 60%;
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    width: 60%;
+
+    &::before {
+      left: -42%;
+      width: 45%;
+    }
+  }
+}
+
+@media screen and (max-width: 885px) {
+  .navbar {
+    width: 65%;
+
+    &::before {
+      left: -32%;
+      width: 32%;
+    }
+  }
+} 
+
+@media screen and (max-width: 815px) {
+  .navbar {
+    width: 70%;
+
+    &::before {
+      left: -22%;
+      width: 22%;
+    }
+  }
+}
+
+@media screen and (max-width: 758px) {
+  .navbar {
+    width: 75%;
+
+    &::before {
+      left: -14%;
+      width: 12%;
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .navbarList li {
+    border-bottom: none;
+    border-left: 3px solid transparent;
+    transition: background-color 0.2s linear;
+
+    @keyframes borderAnimation {
+      from {
+        border-left: 3px solid rgba(255, 255, 255, 0);
+      }
+      
+      to {
+        border-left: 3px solid white;
+      }
+    }
+
+    &.active {
+      animation-name: borderAnimation;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+      animation-fill-mode: forwards;
+    }
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .navbar::before {
+      width: 0;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .burguer {
+    top: 0;
+    z-index: 3;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    margin-top: 0;
+    transform: translateY(0);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+    margin-right: 2rem;
+    width: 40px;
+    height: 50px;
+
+    div {
+      opacity: 1;
+      width: 100%;
+      background-color: white;
+      height: 3px;
+    }
+
+    > div:nth-child(1) {
+      transition: all 0.2s linear;
+      transform: rotate(0deg);
+    }
+
+    > div:nth-child(2) {
+      transition: all 0.2s linear;
+      opacity: 1;
+    }
+
+    > div:nth-child(3) {
+      transition: all 0.2s linear;
+      transform: rotate(0deg);
+    }
+
+    &_active {
+      cursor: pointer;
+      z-index: 3;
+      position: fixed;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      text-align: center;
+      margin-right: 2rem;
+      width: 40px;
+      height: 50px;
+      top: 3.5%;
+      
+      > div {
+        width: 100%;
+        background-color: white;
+        height: 3px;
+        transition: all 0.2s linear;
+        opacity: 1;
+      }
+
+      > div:nth-child(1) {
+        transition: all 0.2s linear;
+
+        position: absolute;
+        transform: rotate(45deg);
+      }
+
+      > div:nth-child(2) {
+        transition: all 0.2s linear;
+
+        opacity: 0;
+      }
+
+      > div:nth-child(3) {
+        position: absolute;
+        transform: rotate(-45deg);
+      }
+    }
+
+  }
+
+  .burguer + .navbar {
+    z-index: 2;
+    position: absolute;
+    width: 70%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 140vh;
+    top: 0;
+    right: 0;
+    padding: 0;
+    display: none;
+    transform: translateX(100%);
+
+    .navbarList {
+      padding-top: 6rem;
+      flex-direction: column;
+
+      li {
+        width: 100%;
+        height: 10rem;
+      }
+    }
+  }
+
+  .burguer_active + .navbar {
+    z-index: 2;
+    position: fixed;
+    width: 70%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    padding: 0;
+    transform: translateX(0);
+    transition: transform 0.2s linear;
+
+    .navbarList {
+      padding-top: 6rem;
+      flex-direction: column;
+
+      li {
+        width: 100%;
+        height: 10rem;
       }
     }
   }
