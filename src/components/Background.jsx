@@ -1,10 +1,8 @@
 import styled from 'styled-components'
 
 const BackgroundImage = styled.div`
-  width: 100vw;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
+  max-width: 100vw;
+  min-height: 100vh;
   padding-bottom: 2rem;
   
   background-image: url('/assets/${({ page }) => page}/background-${({ page }) => page}-desktop.jpg');
@@ -13,11 +11,9 @@ const BackgroundImage = styled.div`
   background-repeat: no-repeat;
 
   @media screen and (max-width: 750px) {
-    height: 140vh;
     background-image: url('/assets/${({ page }) => page}/background-${({ page }) => page}-tablet.jpg');
       
     @media screen and (max-width: 637px) {
-      height: 140vh;    
       background-image: url('/assets/${({ page }) => page}/background-${({ page }) => page}-tablet.jpg');
     }
   }

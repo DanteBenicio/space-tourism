@@ -3,20 +3,6 @@ import Logo from '../../public/assets/shared/logo.jsx'
 import styles from '../styles/Home.module.scss'
 
 export const Header = ({ setBurguer, burguer, setMenuList, menuList, addClassActive, page }) => {
-  useEffect(() => {
-    const burger = document.querySelector('.'+styles.burguer)
-    const navbar = document.querySelector('.'+styles.navbar)
-
-    burger.addEventListener('click', () => {
-      navbar.style.transition = 'transform 0.2s linear';
-      
-      setTimeout(() => {
-        navbar.style.transition = '';
-      }, 200)
-    })
-
-  }, [])
-
   const setActivePage = useCallback(() => {
     setMenuList(menuList.map(li => {
       if (li.name === page) {
